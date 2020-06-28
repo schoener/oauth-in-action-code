@@ -73,7 +73,6 @@ app.get("/authorize", function(req, res){
 		}
 		
 		var reqid = randomstring.generate(8);
-		
 		requests[reqid] = req.query;
 		
 		res.render('approve', {client: client, reqid: reqid, scope: rscope});
